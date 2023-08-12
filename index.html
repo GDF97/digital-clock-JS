@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Glassmorphism Digital Clock</title>
+
+    <link rel="stylesheet" href="animations.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="clock-body-wrapper">
+      <div class="ball-1 animate animate-infinite floatingDown"></div>
+      <div class="ball-2 animate animate-infinite floatingUp"></div>
+      <div class="clock-body">
+        <span id="dayWeek">Saturday</span>
+        <div class="clock-numbers-wrapper">
+          <div class="numberDiv" id="hour"></div>
+          <span class="divider">:</span>
+          <div class="numberDiv" id="minutes"></div>
+          <span class="divider">:</span>
+          <div class="numberDiv" id="seconds"></div>
+        </div>
+        <span class="dateNumberString">
+          <p id="dayNumber"></p>
+          <p id="monthString"></p>
+        </span>
+      </div>
+    </div>
+  </body>
+</html>

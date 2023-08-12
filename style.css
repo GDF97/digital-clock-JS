@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500&display=swap");
+
+:root {
+  --clr-rose: #e8c7e1;
+  --clr-blue: #9796f0;
+  --clr-ball1: #f197dd;
+  --clr-ball2: #4744f1;
+  --bg-body: linear-gradient(90deg, var(--clr-blue) 0%, var(--clr-rose) 100%);
+  --bg-clock-body: #ffffff12;
+  --bg-clock-number: #ffffff19;
+  --ball-size: 15rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* outline: 1px solid red; */
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-body);
+  font-family: consolas;
+}
+
+.clock-body-wrapper {
+  width: 750px;
+  height: 300px;
+  position: relative;
+}
+
+.clock-body {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  backdrop-filter: blur(20px);
+  background-color: var(--bg-clock-body);
+  border-radius: 10px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 10px 10px 30px 5px rgba(0, 0, 0, 0.271);
+  outline: 1px solid rgba(255, 255, 255, 0.516);
+}
+
+.ball-1,
+.ball-2 {
+  border-radius: 10px;
+  border: none;
+  width: var(--ball-size);
+  height: var(--ball-size);
+  position: absolute;
+}
+
+.ball-1 {
+  top: -100px;
+  left: -100px;
+  background: linear-gradient(var(--clr-rose) 0%, var(--clr-ball1) 100%);
+}
+
+.ball-2 {
+  bottom: -100px;
+  right: -100px;
+  background: linear-gradient(var(--clr-blue) 0%, var(--clr-ball2) 100%);
+}
+
+#dayWeek {
+  font-size: 1.25rem;
+  color: white;
+}
+
+.clock-numbers-wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  color: white;
+}
+
+.divider {
+  font-size: 2rem;
+}
+
+.numberDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 5rem;
+  background-color: var(--bg-clock-number);
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 10px 10px 30px 5px rgba(0, 0, 0, 0.271);
+  backdrop-filter: blur(20px);
+  outline: 1px solid rgba(255, 255, 255, 0.516);
+}
+
+.dateNumberString {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  gap: 1rem;
+  font-size: 1.5rem;
+  color: white;
+}
