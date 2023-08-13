@@ -7,13 +7,13 @@ let monthString = document.getElementById("monthString");
 
 const clock = () => {
   let daysWeek = [
+    "Sunday",
     "Monday",
     "Tuesday",
     "Wednesday",
     "Thursday",
     "Friday",
     "Saturday",
-    "Sunday",
   ];
 
   let months = [
@@ -33,14 +33,12 @@ const clock = () => {
 
   let date = new Date();
 
-  dayWeek.innerHTML = daysWeek[date.getDay() - 1];
+  dayWeek.innerHTML = daysWeek[date.getDay()];
   hourDisplay.innerHTML = date.getHours();
   minuteDisplay.innerHTML = date.getMinutes();
   secondsDisplay.innerHTML = date.getSeconds();
   dayNumber.innerHTML = date.getDate();
   monthString.innerHTML = months[date.getMonth()];
-  console.log(date.getMonth());
-  console.log(daysWeek[date.getDay() - 1]);
 
   if (date.getHours() < 10) {
     hourDisplay.innerHTML = "0" + date.getHours();
